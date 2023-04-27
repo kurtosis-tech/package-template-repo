@@ -15,7 +15,11 @@ To run it locally, [install Kurtosis][install-kurtosis] and run the same.
 
 To blow away the created [enclave][enclaves-reference], run `kurtosis clean -a`.
 
-### Configuration
+#### Configuration
+
+<details>
+    <summary>Click to see configuration</summary>
+
 <!-- You can parameterize your package as you prefer; see https://docs.kurtosis.com/next/concepts-reference/args for more -->
 You can configure this package using the following JSON structure:
 
@@ -31,6 +35,8 @@ For example:
 ```bash
 kurtosis run github.com/YOURUSER/THISREPO '{"name":"Maynard James Keenan"}'
 ```
+
+</details>
 
 Use this package in your package
 --------------------------------
