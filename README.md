@@ -55,8 +55,8 @@ Then, call the this package's `run` function somewhere in your Starlark script:
 this_package_output = this_package.run(plan, args)
 ```
 
-Developing
-----------
+Develop on this package
+-----------------------
 1. [Install Kurtosis][install-kurtosis]
 1. Clone this repo
 1. For your dev loop, run `kurtosis clean -a && kurtosis run .` inside the repo directory
