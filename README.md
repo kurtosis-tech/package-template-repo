@@ -4,14 +4,16 @@ This is a [Kurtosis package](https://docs.kurtosis.com/concepts-reference/packag
 
 Run this package
 ----------------
-Open [the Kurtosis playground](https://gitpod.io/#/https://github.com/kurtosis-tech/playground-gitpod) and run:
+If you have [Kurtosis installed][install-kurtosis], run:
 
 <!-- TODO replace YOURUSER and THISREPO with the correct values -->
 ```bash
 kurtosis run github.com/YOURUSER/THISREPO
 ```
 
-To run it locally, [install Kurtosis][install-kurtosis] and run the same.
+<!-- TODO Add a URL-encoded version of github.com/YOURUSER/THISREPO to right after "KURTOSIS_PACKAGE_LOCATOR=" in the link below -->
+<!-- TODO You can URL-encode a string using https://www.urlencoder.org/ -->
+If you don't have Kurtosis installed, [click here to run this package on the Kurtosis playground](https://gitpod.io/#KURTOSIS_PACKAGE_LOCATOR=/https://github.com/kurtosis-tech/playground-gitpod).
 
 To blow away the created [enclave][enclaves-reference], run `kurtosis clean -a`.
 
@@ -20,20 +22,32 @@ To blow away the created [enclave][enclaves-reference], run `kurtosis clean -a`.
 <details>
     <summary>Click to see configuration</summary>
 
-<!-- You can parameterize your package as you prefer; see https://docs.kurtosis.com/next/concepts-reference/args for more -->
-You can configure this package using the following JSON structure:
+You can configure this package using the JSON structure below. The default values for each parameter are shown.
 
+NOTE: the `//` lines are not valid JSON; you will need to remove them!
+
+<!-- TODO Parameterize your package as you prefer; see https://docs.kurtosis.com/next/concepts-reference/args for more -->
 ```javascript
 {
+    // The name to print
     "name": "John Snow"
 }
 ```
+
+The arguments can then be passed in to `kurtosis run`.
 
 For example:
 
 <!-- TODO replace YOURUSER and THISREPO with the correct values -->
 ```bash
 kurtosis run github.com/YOURUSER/THISREPO '{"name":"Maynard James Keenan"}'
+```
+
+You can also store the JSON args in a file, and use command expansion to slot them in:
+
+<!-- TODO replace YOURUSER and THISREPO with the correct values -->
+```bash
+kurtosis run github.com/YOURUSER/THISREPO "$(cat args.json)"
 ```
 
 </details>
