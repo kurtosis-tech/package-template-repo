@@ -9,3 +9,5 @@ NAME_ARG = "name"
 def run(plan, args):
     name = args.get(NAME_ARG, "John Snow")
     plan.print("Hello, " + name)
+
+    # Try out a plan.add_service here (https://docs.kurtosis.com/starlark-reference/plan#add_service)
