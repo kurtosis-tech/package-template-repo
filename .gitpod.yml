@@ -17,10 +17,6 @@ ports:
   - name: Kurtosis Engine Grpc Listen
     port: 9710
     onOpen: ignore
-  - name: Kurtosis Engine Grpc Proxy Listen
-    port: 9710
-    onOpen: ignore
-
 
 vscode:
   extensions:
