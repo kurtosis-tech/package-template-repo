@@ -5,6 +5,7 @@ def run_hello(plan, config_json):
         config = ServiceConfig(
             image = "hello-world",
             files = {
+                # This is just an example showing how to mount files on a service
                 "/config": config_json,
             }
         )
