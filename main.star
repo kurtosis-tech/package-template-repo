@@ -1,10 +1,12 @@
 # NOTE: If you're a VSCode user, you might like our VSCode extension: https://marketplace.visualstudio.com/items?itemName=Kurtosis.kurtosis-extension
 
-# Importing a file local to this package: https://docs.kurtosis.com/starlark-reference/import-module
-lib = import_module("./lib/lib.star")
-
-# Importing another package: https://docs.kurtosis.com/starlark-reference/import-module
+# Importing the Postgres package from the web using absolute import syntax
+# See also: https://docs.kurtosis.com/starlark-reference/import-module
 postgres = import_module("github.com/kurtosis-tech/postgres-package/main.star")
+
+# Importing a file inside this package using relative import syntax
+# See also: https://docs.kurtosis.com/starlark-reference/import-module
+lib = import_module("./lib/lib.star")
 
 # For more information on...
 #  - the 'run' function:  https://docs.kurtosis.com/concepts-reference/packages#runnable-packages
