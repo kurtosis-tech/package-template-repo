@@ -1,6 +1,6 @@
 My Package
 ============
-This is a [Kurtosis package](https://docs.kurtosis.com/concepts-reference/packages). It doesn't do much now, but it will soon!
+This is a [Kurtosis](https://github.com/kurtosis-tech/kurtosis/) package. It doesn't do much now, but it will soon!
 
 Run this package
 ----------------
