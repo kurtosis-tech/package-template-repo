@@ -61,6 +61,12 @@ First, import this package by adding the following to the top of your Starlark f
 this_package = import_module("github.com/YOURUSER/THISREPO/main.star")
 ```
 
+If you want to import the package from a branch other than main, you can update the import command to:
+
+```python
+this_package = import_module("github.com/YOURUSER/THISREPO/main.star@YOURBRANCH")
+```
+
 Then, call the this package's `run` function somewhere in your Starlark script:
 
 ```python
