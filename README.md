@@ -58,7 +58,7 @@ Kurtosis packages can be composed inside other Kurtosis packages. To use this pa
 First, import this package by adding the following to the top of your Starlark file:
 
 ```python
-# For remote packages:
+# For remote packages: 
 this_package = import_module("github.com/YOURUSER/THISREPO/main.star") 
 
 # For local packages:
