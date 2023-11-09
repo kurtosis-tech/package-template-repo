@@ -65,7 +65,7 @@ this_package = import_module("github.com/YOURUSER/THISREPO/main.star")
 this_package = import_module(".src/main.star")
 ```
 
-If you want to use a fork or specific version of this package in your own package, you can replace the dependencies in your `kurtosis.yml` file using the [Replace](https://docs.kurtosis.com/concepts-reference/kurtosis-yml/#replace) primitive. 
+If you want to use a fork or specific version of this package in your own package, you can replace the dependencies in your `kurtosis.yml` file using the [replace](https://docs.kurtosis.com/concepts-reference/kurtosis-yml/#replace) primitive. 
 Within your `kurtosis.yml` file:
 ```python
 name: github.com/example-org/example-repo
