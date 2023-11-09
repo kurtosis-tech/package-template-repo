@@ -58,7 +58,19 @@ Kurtosis packages can be composed inside other Kurtosis packages. To use this pa
 First, import this package by adding the following to the top of your Starlark file:
 
 ```python
-this_package = import_module("github.com/YOURUSER/THISREPO/main.star")
+# For remote packages: 
+this_package = import_module("github.com/YOURUSER/THISREPO/main.star") 
+
+# For local packages:
+this_package = import_module(".src/main.star")
+```
+
+If you want to use a fork or specific version of this package in your own package, you can replace the dependencies in your `kurtosis.yml` file using the [replace](https://docs.kurtosis.com/concepts-reference/kurtosis-yml/#replace) primitive. 
+Within your `kurtosis.yml` file:
+```python
+name: github.com/example-org/example-repo
+replace:
+    github.com/YOURUSER/THISREPO: github.com/YOURUSER/THISREPO@YOURBRANCH
 ```
 
 Then, call the this package's `run` function somewhere in your Starlark script:
