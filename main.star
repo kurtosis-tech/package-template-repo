@@ -25,9 +25,9 @@ def run(plan, name = "John Snow"):
     plan.add_service(
         name = "dependant",
         config = ServiceConfig(
-            image = NixBuildSpec(flake_location_dir = "./", build_context_dir = "./"),
+            image = NixBuildSpec(flake_output = "containerImage", flake_location_dir = "./hello-go", build_context_dir = "./"),
             env_vars = {
-                "DEPENDENCY_URL": "http://{}:{}".format("dddd", "rrrr"),
+                "DEPENDENCY_URL": "http://{}:{}".format("some.url", "8888"),
             },
         ),
     )
