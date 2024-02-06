@@ -23,9 +23,9 @@ def run(plan, name = "John Snow"):
     postgres.run(plan)
 
     plan.add_service(
-        name = "dependant",
+        name = "go-nix",
         config = ServiceConfig(
-            image = NixBuildSpec(flake_output = "containerImage", flake_location_dir = "./hello-go", build_context_dir = "./"),
+            image = NixBuildSpec(image_name = "hello-world-server", flake_output = "containerImage", flake_location_dir = "./hello-go", build_context_dir = "./"),
             env_vars = {
                 "DEPENDENCY_URL": "http://{}:{}".format("some.url", "8888"),
             },

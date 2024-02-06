@@ -37,7 +37,10 @@
         in pkgs.dockerTools.buildImage {
           name = "hello-world-server";
           tag = "latest";
-          config.Cmd = [ "${content}/bin/linux_arm64/${pname}" ];
+          config.Cmd = if system == "aarch64-linux" then
+            [ "${content}/bin/${pname}" ]
+          else
+            [ "${content}/bin/linux_arm64/${pname}" ];
         };
 
       in {
