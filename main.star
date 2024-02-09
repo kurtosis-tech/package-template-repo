@@ -25,7 +25,7 @@ def run(plan, name = "John Snow"):
     plan.add_service(
         name = "go-nix",
         config = ServiceConfig(
-            image = NixBuildSpec(image_name = "hello-world-server", flake_output = "containerImage", flake_location_dir = "./hello-go", build_context_dir = "./"),
+            image = NixBuildSpec(image_name = "hello-world-server", flake_output = "container", flake_location_dir = "./hello-go", build_context_dir = "./"),
             env_vars = {
                 "DEPENDENCY_URL": "http://{}:{}".format("some.url", "8888"),
             },
